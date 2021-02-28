@@ -1,6 +1,6 @@
-# flutter_erico_bloc_vb6
+# flutter_bloc
 
-A new Flutter application.
+flutter bloc practice from erico's youtube channel
 
 ## Getting Started
 

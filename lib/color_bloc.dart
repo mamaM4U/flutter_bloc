@@ -2,18 +2,16 @@
 import 'package:flutter/material.dart';
 
 
-enum ColorEvent {to_amber, to_light_blue}
+enum ColorEvent {to_pink,to_amber, to_purple}
 
   class ColorBloc extends Bloc<ColorEvent,Color>{
-  Color _color = Colors.amber;
 
   @override
-  Color get initialState => Colors.amber;
+  Color get initialState => Colors.pink;
 
   @override
   Stream<Color> mapEventToState(ColorEvent event) async* {
-    _color = (event == ColorEvent.to_amber)? Colors.amber : Colors.lightBlue;
-    yield _color;
+    yield (event == ColorEvent.to_pink  )? Colors.pink : (event == ColorEvent.to_amber  )? Colors.amber : Colors.purple;
   }
   
   }

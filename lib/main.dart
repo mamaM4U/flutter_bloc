@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_erico_bloc_vb6/color_bloc.dart';
+import 'package:bloc/bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  BlocSupervisor.delegate = await HydratedBlocDelegate.build();
   runApp(MyApp());
 }
 
